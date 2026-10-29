@@ -1,0 +1,22 @@
+2023-11-23
+Patient 
+ id=12
+name=Fuentes Gabriela
+dateOfbirth=2020-11-11
+age=3
+maritalStatus=Single
+sex=Female
+insuranceCompany=AXA
+DocReferred=Dr. Marta Fuentes Gonzalez
+email=mail
+phone=818349373
+residence=Monterrey
+height=180
+weight=60.0
+BMI=18.52
+alergies=nD
+notes=ND
+Current Diagnosis=
+Current Prescription=
+occupation=Student
+Next Consultation: Date: 

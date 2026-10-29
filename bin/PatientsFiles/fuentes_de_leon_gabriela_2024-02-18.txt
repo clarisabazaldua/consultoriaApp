@@ -1,0 +1,22 @@
+2024-02-18
+Patient 
+ id=25
+name=fuentes de leon gabriela
+dateOfbirth=1970-03-24
+age=53
+maritalStatus=Married
+sex=Female
+insuranceCompany=AXA
+DocReferred=dra miriam moreno
+email=manuel_clarisa@yahoo.com
+phone=8116117061
+residence=san alberto 417 T3PH02. mirador del campestre. SPGG
+height=163
+weight=56.0
+BMI=21.08
+alergies=AINES
+notes=no
+Current Diagnosis=
+Current Prescription=
+occupation=pediatra
+Next Consultation: Date: 

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00aeee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewPatientsController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="604.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Return to Home Page">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mItemReturntoHomePageClick" text="Return" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tabPane" layoutX="-3.0" layoutY="29.0" prefHeight="372.0" prefWidth="607.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabTablePatients" text="Table of Patients">
+               <content>
+                  <AnchorPane prefHeight="339.0" prefWidth="598.0" style="-fx-background-color: #00aeee;">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="276.0" layoutX="14.0" layoutY="50.0" stroke="WHITE" strokeType="INSIDE" width="583.0" />
+                        <Label layoutX="27.0" layoutY="2.0" text="View Patients" textFill="WHITE">
+                           <font>
+                              <Font name="Avenir Next Condensed Medium" size="28.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="21.0" layoutY="38.0" prefHeight="4.0" prefWidth="568.0" />
+                        <TableView fx:id="tablePatients" layoutX="14.0" layoutY="90.0" onMouseClicked="#OnMouseClickedTablePatients" prefHeight="235.0" prefWidth="583.0">
+                          <columns>
+                            <TableColumn fx:id="colName" prefWidth="209.0" text="Name" />
+                              <TableColumn fx:id="colSex" prefWidth="56.0" text="Sex" />
+                              <TableColumn fx:id="colAge" prefWidth="53.0" text="Age" />
+                              <TableColumn fx:id="colDiagnosis" prefWidth="131.0" text="Diagnosis" />
+                              <TableColumn fx:id="colReference" prefWidth="133.0" text="Reference" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txtSearchPatient" layoutX="134.0" layoutY="58.0" prefHeight="27.0" prefWidth="296.0" />
+                        <Label layoutX="27.0" layoutY="62.0" prefHeight="17.0" prefWidth="213.0" text="Patient Name:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="442.0" layoutY="58.0" mnemonicParsing="false" onAction="#btnSearchClicked" text="Search" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabContactInfo" text="Selected Patient Contact Info">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #00aeee;">
+                     <children>
+                        <Label layoutX="26.0" text="View Patients" textFill="WHITE">
+                           <font>
+                              <Font name="Avenir Next Condensed Medium" size="28.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="20.0" layoutY="39.0" prefHeight="3.0" prefWidth="575.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="284.0" layoutX="14.0" layoutY="49.0" stroke="WHITE" strokeType="INSIDE" width="587.0" />
+                        <TextField fx:id="txtDocName" layoutX="288.0" layoutY="156.0" prefHeight="27.0" prefWidth="158.0" />
+                        <TextField fx:id="txtCellPhone" layoutX="381.0" layoutY="205.0" prefHeight="27.0" prefWidth="172.0" />
+                        <TextField fx:id="txtEmail" layoutX="70.0" layoutY="205.0" prefHeight="27.0" prefWidth="210.0" />
+                        <TextArea fx:id="txtOccupation" layoutX="27.0" layoutY="259.0" prefHeight="57.0" prefWidth="272.0" />
+                        <TextArea fx:id="txtResidence" layoutX="320.0" layoutY="259.0" prefHeight="56.0" prefWidth="271.0" />
+                        <DatePicker fx:id="datePickerDateOfBirth" layoutX="353.0" layoutY="58.0" prefHeight="27.0" prefWidth="120.0" promptText="xx/xx/xx" />
+                        <ComboBox fx:id="cbMaritalStatus" layoutX="116.0" layoutY="99.0" prefHeight="27.0" prefWidth="122.0" />
+                        <ComboBox fx:id="cbSex" layoutX="274.0" layoutY="99.0" prefHeight="27.0" prefWidth="76.0" />
+                        <ComboBox fx:id="cbInsurance" layoutX="478.0" layoutY="99.0" prefHeight="27.0" prefWidth="109.0" />
+                        <ComboBox fx:id="cbReferringDoc" layoutX="143.0" layoutY="156.0" prefHeight="27.0" prefWidth="112.0" />
+                        <Button layoutX="259.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnPlusReferringDocOnClicked" text="+" />
+                        <Button fx:id="btnAddDoc" layoutX="453.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnAddDocOnClick" text="Add" />
+                        <Label fx:id="lblName" layoutX="26.0" layoutY="63.0" text="Name:" />
+                        <Label layoutX="272.0" layoutY="63.0" text="Date of Birth:" />
+                        <Label layoutX="25.0" layoutY="104.0" text="Marital Status:" />
+                        <Label layoutX="243.0" layoutY="104.0" text="Sex:" />
+                        <Label layoutX="364.0" layoutY="104.0" text="Insurance Company:" />
+                        <Label fx:id="lblAge" layoutX="480.0" layoutY="63.0" text="Age: " />
+                        <Label layoutX="25.0" layoutY="161.0" prefHeight="17.0" prefWidth="133.0" text="Doctor who refered*:" />
+                        <Label layoutX="20.0" layoutY="210.0" prefHeight="17.0" prefWidth="103.0" text="Email*:" />
+                        <Label layoutX="302.0" layoutY="210.0" prefHeight="17.0" prefWidth="103.0" text="Cell Phone*:" />
+                        <Label layoutX="40.0" layoutY="242.0" prefHeight="17.0" prefWidth="103.0" text="Occupation:" />
+                        <Label layoutX="330.0" layoutY="242.0" prefHeight="17.0" prefWidth="103.0" text="Residence*:" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabMedicalHistory" text="Selected Patient Medical History">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #00aeee;">
+                     <children>
+                        <Label layoutX="28.0" text="View Patients" textFill="WHITE">
+                           <font>
+                              <Font name="Avenir Next Condensed Medium" size="28.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="14.0" layoutY="37.0" prefHeight="5.0" prefWidth="577.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="282.0" layoutX="15.0" layoutY="49.0" stroke="WHITE" strokeType="INSIDE" width="577.0" />
+                        <TextField fx:id="txtHeight" layoutX="74.0" layoutY="66.0" prefHeight="27.0" prefWidth="103.0" />
+                        <TextField fx:id="txtWeight" layoutX="74.0" layoutY="105.0" prefHeight="27.0" prefWidth="100.0" />
+                        <TextArea fx:id="txtAlergies" layoutX="28.0" layoutY="209.0" prefHeight="104.0" prefWidth="239.0" />
+                        <TextArea fx:id="txtCdiagnosis" layoutX="298.0" layoutY="88.0" prefHeight="112.0" prefWidth="279.0" />
+                        <TextArea fx:id="txtcPrescription" layoutX="298.0" layoutY="233.0" prefHeight="83.0" prefWidth="278.0" />
+                        <Label layoutX="28.0" layoutY="71.0" text="Height:" />
+                        <Label layoutX="28.0" layoutY="110.0" text="Weight:" />
+                        <Label fx:id="lblBMI" layoutX="36.0" layoutY="144.0" text="BMI:" />
+                        <Label layoutX="36.0" layoutY="182.0" text="Alergies:" />
+                        <Label layoutX="310.0" layoutY="63.0" text="Current Diagnosis:" />
+                        <Label layoutX="310.0" layoutY="209.0" text="Current Prescription:" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabNota" text="Nota:">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="28.0" text="View Patients" textFill="WHITE">
+                           <font>
+                              <Font name="Avenir Next Condensed Medium" size="28.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="15.0" layoutY="38.0" prefHeight="5.0" prefWidth="577.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="282.0" layoutX="15.0" layoutY="50.0" stroke="WHITE" strokeType="INSIDE" width="577.0" />
+                        <TextArea fx:id="txtNota" layoutX="43.0" layoutY="98.0" prefHeight="156.0" prefWidth="519.0" />
+                        <Label layoutX="59.0" layoutY="72.0" text="Nota:" />
+                        <Button layoutX="78.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnEditOnClick" prefHeight="27.0" prefWidth="87.0" text="Edit" />
+                        <Button layoutX="200.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnCancelOnClick" prefHeight="27.0" prefWidth="92.0" text="Cancel" />
+                        <Button layoutX="317.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnDeleteOnClick" prefHeight="27.0" prefWidth="97.0" text="Delete" />
+                        <Button layoutX="438.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnCreateFileOnClick" prefHeight="27.0" prefWidth="94.0" text="Create File" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+2023-11-23
+Patient 
+ id=4
+name=Isabella Castillo
+dateOfbirth=2005-05-16
+age=18
+maritalStatus=Single
+sex=Female
+insuranceCompany=GNP seguros
+DocReferred=Adrian Abarca
+email=isabellacastillo0516@gmail.com
+phone=81 1568 7167
+residence=San Pedro Garza Garcia, Nuevo Leon
+height=168
+weight=68.0
+BMI=24.09
+alergies=Penicilin, Lactose
+notes=Currently in PCOS treatment
+Current Diagnosis=PCOS, Prediabetes
+Current Prescription=Ozempic, Aldactone, Lcarnitina, Glucophage
+occupation=Student
+Next Consultation: Date: 

@@ -1,0 +1,22 @@
+2023-12-18
+Patient 
+ id=2
+name=Rebolledo Fuentes Leonardo 
+dateOfbirth=2006-07-10
+age=17
+maritalStatus=Single
+sex=Male
+insuranceCompany=AXA
+DocReferred=Dra. Eugenia Fuentes
+email=leoemail@gmail.com
+phone=81172394024
+residence=Tampico, Tamapulipas
+height=180
+weight=80.0
+BMI=24.69
+alergies=No Alergies
+notes=His head hurts
+Current Diagnosis=Headache
+Current Prescription=pills
+occupation=Student
+Next Consultation: Date: 
